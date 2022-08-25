@@ -2,17 +2,28 @@
 
 ## 1. Overview du projet 
 
-Walmart Inc. is an American multinational retail corporation that operates a chain of hypermarkets, discount department stores, and grocery stores from the United States, headquartered in Bentonville, Arkansas. The company was founded by Sam Walton in 1962.
+Walmart Inc. est une multinationale de vente au détail qui comprend une chaîne d'hypermarchés, de grands magasins discount et d'épiceries aux États-Unis. La société a été fondée par Sam Walton en 1962.
 
-Walmart's marketing service has asked you to build a machine learning model able to estimate the weekly sales in their stores, with the best precision possible on the predictions made. Such a model would help them understand better how the sales are influenced by economic indicators, and might be used to plan future marketing campaigns.
+Le service marketing de Walmart souhaite construire un **modèle de machine learning** capable d'estimer les ventes hebdomadaires dans leurs magasins, avec la meilleure précision possible sur les prédictions faites. Un tel modèle les aiderait à mieux comprendre comment les ventes sont influencées par les indicateurs économiques et pourrait être utilisé pour planifier de futures campagnes de marketing.
+
+Les variables disponibles sont : 
+  * L'identifiant du magasin 
+  * La date
+  * Les ventes hebdomadaires réalisées
+  * Si la date est un jour férié ou non
+  * La température
+  * Le prix du carburant
+  * Le Consumer Price Index (CPI) qui est un indicateur qui mesure le changement de prix dans les biens et services essentiels tels que les loyers, la nourriture et l'energie. 
+  * Le taux de chômage
 
 ## 2. Objectifs 
 
-The project can be divided into three steps:
+Ce projet est découpé en 3 étapes : 
 
-- Part 1 : make an EDA and all the necessary preprocessings to prepare data for machine learning
-- Part 2 : train a **linear regression model** (baseline)
-- Part 3 : avoid overfitting by training a **regularized regression model**
+  * Partie 1 : Analyse Descriptive Exploratoire et pré-traitement des données 
+  * Partie 2 : Construire un modèle de régression linéaire (baseline) qu'on pourra ensuite optimiser à l'aide d'une technique de régularisation 
+
+
 
 
 
