@@ -66,6 +66,8 @@ Le notebook
 
 ### Analyse descriptive exploratoire
 
+![image](https://user-images.githubusercontent.com/38078432/186984905-73191b43-bdaf-4ab9-97f6-eb36dc7f941f.png)
+
 
 ### Modélisation Weekly_Sales ~ f(X)
 
