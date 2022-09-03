@@ -71,7 +71,7 @@ Le notebook **Part 2 - Machine Learning.ipynb** prend en input le fichier prepro
 
 ### Analyse descriptive exploratoire
 
-La première visualisation montre des données parcellaires (dates manquantes, volume de données inconsistant). C'est un aspect important à prendre en compte puisqu'il vient tempérer tous les résultats obtenus - Un "bon" modèle ne compensera jamais des données de "mauvaise" qualité [^1]. 
+La première visualisation montre des données parcellaires (dates manquantes, volume de données inconsistant). C'est un aspect important à prendre en compte puisqu'il vient tempérer tous les résultats obtenus - Un "bon" modèle ne compensera jamais des données de "mauvaise" qualité[^1]. 
 
 ![image](https://user-images.githubusercontent.com/38078432/186984905-73191b43-bdaf-4ab9-97f6-eb36dc7f941f.png)
 
@@ -115,5 +115,5 @@ Kaggle dataset : https://www.kaggle.com/datasets/yasserh/walmart-dataset
 
 ----
 
-[^1] : Cortes, Corinna & Jackel, Larry & Chiang, Wan-ping. (2000). Limits on Learning Machine Accuracy Imposed by Data Quality. 
+[^1]: Cortes, Corinna & Jackel, Larry & Chiang, Wan-ping. (2000). Limits on Learning Machine Accuracy Imposed by Data Quality. 
 
