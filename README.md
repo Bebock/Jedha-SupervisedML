@@ -58,7 +58,12 @@ Les librairies suivantes sont nécessaires :
 
 ### Les fichiers
 
-Le notebook 
+Le notebook **Part 1 - EDA and preprocessing.ipynb** prend en input le fichier Walmart_Store_sales.csv et réalise l'overview préalable du jeu de données ainsi que les premiers traitements de données préalables à l'analyse. Il aboutit à la création du fichier preprocessed.csv qui contient les données pré-traitées et prêtes à l'analyse.
+
+Le notebook **Part 2 - Machine Learning.ipynb** prend en input le fichier preprocessed.csv et réalise :
+  * Le pré-traitement lié à l'analyse (imputation des données manquantes, transformation des variables, découpage du dataset en deux sous-datasets pour l'entrainement du modèle puis pour son test)
+  * Le modèle de régression linéaire classique - Baseline
+  * Les modèles régularisés - Lasso, Ridge et Elasticnet
 
 ----
 
@@ -66,12 +71,25 @@ Le notebook
 
 ### Analyse descriptive exploratoire
 
+La première visualisation montre des données parcellaires (dates manquantes, volume de données inconsistant). C'est un aspect important à prendre en compte puisqu'il vient tempérer tous les résultats obtenus - Un "bon" modèle ne compensera jamais des données de "mauvaise" qualité [^1]. 
+
 ![image](https://user-images.githubusercontent.com/38078432/186984905-73191b43-bdaf-4ab9-97f6-eb36dc7f941f.png)
 
+Le caractère incomplet des données des données est renforcé par cette seconde visualisation qui permet d'appréhender le volume de données par année et par magasin. 
+
+![image](https://user-images.githubusercontent.com/38078432/188269235-ac513dfa-46bb-4ac8-b3c0-f2fb6299e58b.png)
+
+Ainsi, la base de données fournie permet un bon exercice car sa taille limitée en nombre d'observations oblige à se questionner sur les modèles générés mais aucune des conclusions tirées à partir d'un tel jeu de données ne peut être extrapolable. 
 
 ### Modélisation Weekly_Sales ~ f(X)
 
+Le modèle de régression linéaire de base donne déjà satisfaction en termes de performances (R²). Néanmoins le grand nombre de paramètres estimés à l'aide d'un échantillon de taille limitée nécessite l'utilisation d'algorithmes plus complexes. 
 
+![image](https://user-images.githubusercontent.com/38078432/188269265-23494af9-ae3d-451b-9c9d-0f5659789958.png)
+
+Le modèle Lasso a été préféré et il permet de simplifier le modèle en mettant les paramètres les moins explicatifs/prédictifs à 0. 
+
+![image](https://user-images.githubusercontent.com/38078432/188269292-c646a785-38f0-4c60-bc3c-f8eb7069e1bd.png)
 
 ----
 
@@ -93,10 +111,9 @@ La dream team :
   
 ### Sites sources des données
 
-Kaggle competittion : 
-
+Kaggle dataset : https://www.kaggle.com/datasets/yasserh/walmart-dataset
 
 ----
 
-
+[^1] : Cortes, Corinna & Jackel, Larry & Chiang, Wan-ping. (2000). Limits on Learning Machine Accuracy Imposed by Data Quality. 
 
