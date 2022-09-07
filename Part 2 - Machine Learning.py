@@ -106,13 +106,6 @@ X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.3, rando
 # In[6]:
 
 
-# Number of missing values per variable
-X_train.isnull().sum()
-
-
-# In[7]:
-
-
 import missingno as msno
 
 fig, axarr = plt.subplots(ncols = 2, figsize = (15,7))
@@ -120,14 +113,23 @@ msno.matrix(X_train, ax = axarr[0], fontsize = 9);
 msno.heatmap(X_train, ax = axarr[1], fontsize = 9);
 
 
+# In[7]:
+
+
+# Number of missing values per variable
+X_train.isnull().sum()
+
+
 # Data seems to be missing at random, allowing us to procede to an imputation (replacement of the missing value by another value derived from the data, could be the mean, the median or a value computed with a more complex algorithm). We just observe a strong correlation of missingness between the 3 variables derived from date (date missing, the 3 variables are missing). 
 
 # In[8]:
 
 
+# Categorical variables are already dummy coded, let's scale the continuous ones
 # Categorical variables are dummy coded and continuous ones are scaled
 categorical = Pipeline(
     steps = [
+        ('imputer', SimpleImputer(strategy='most_frequent')), # missing values will be replaced by most frequent value
         ('encoder', OneHotEncoder(drop='first'))
     ]
 )
@@ -495,9 +497,6 @@ for i in range(4):
 
 
 # Compared to Regression, Lasso model leads to the most important decrease regarding all the indicators 
-# - MSE : Decrease of 25%
-# - Bias : Decrease of 13%
-# - Variance : Decrease of 33%
 
 # Let's finally have a look to the coefficients of the Lasso Model
 
