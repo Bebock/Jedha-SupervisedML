@@ -1,3 +1,7 @@
+
+[Lien vers la video](https://share.vidyard.com/watch/GqYcpkHLpK2VBuUJKSYDdx?)
+
+
 # Walmart : Prédiction des ventes hebdomadaires
 
 ----
